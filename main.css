@@ -1,0 +1,273 @@
+
+*{
+      margin:0;
+      padding:0;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.spinner {
+  width: 250px;
+  height: 200px;
+  position: relative;
+  animation: rotation 0.75s linear infinite;
+  border-radius: 100em;
+}
+
+.path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 20;
+  stroke-linecap: round;
+}
+
+
+.heart1 {
+  color: red;
+}
+
+.heart2 {
+  color: crimson;
+  font-size: 30px
+}
+
+.sun {
+  color: orangered;
+}
+
+.moon {
+   color: #e8e8e8
+}
+
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.image-gallery-fullscreen-button .image-gallery-svg, .image-gallery-play-button .image-gallery-svg {
+      height: 28px;
+      width: 28px;
+      margin-left: 0px;
+      margin-right: 0px;
+  }
+
+  .image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+      height: 40px;
+      width: 40px;
+      margin-left: 0;
+      margin-rgith: 0;
+  }
+
+  .image-gallery-thumbnail-image {
+    margin-top: 18px;
+    width: 150px;
+    height: 100px;
+ }
+ 
+ .image-gallery-image {
+   width: 950px;
+   height: 700px;
+ }
+
+
+  .line {
+    line-height: 1000px;
+  }
+
+  .myCard {
+    height:200px; 
+    width: 240px;
+   }
+
+
+   /* login */
+
+   @keyframes moving-border {
+    0% {
+      border-color: orange purple purple orange;
+    }
+    25% {
+      border-color: purple orange orange purple;
+    }
+    50% {
+      border-color: purple purple orange orange;
+    }
+    75% {
+      border-color: orange orange purple purple;
+    }
+    100% {
+      border-color: orange purple purple orange;
+    }
+  }
+  
+  .animate-moving-border {
+    animation: moving-border 5s linear infinite;
+  }
+
+  /* From Uiverse.io by G4b413l */ 
+.three-body {
+  --uib-size: 32px;
+  --uib-speed: 0.8s;
+  --uib-color: white;
+  position: relative;
+  display: inline-block;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
+ }
+ 
+ .three-body__dot {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+ }
+ 
+ .three-body__dot:after {
+  content: '';
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: var(--uib-color);
+  border-radius: 50%;
+ }
+ 
+ .three-body__dot:nth-child(1) {
+  bottom: 5%;
+  left: 0;
+  transform: rotate(60deg);
+  transform-origin: 50% 85%;
+ }
+ 
+ .three-body__dot:nth-child(1)::after {
+  bottom: 0;
+  left: 0;
+  animation: wobble1 var(--uib-speed) infinite ease-in-out;
+  animation-delay: calc(var(--uib-speed) * -0.3);
+ }
+ 
+ .three-body__dot:nth-child(2) {
+  bottom: 5%;
+  right: 0;
+  transform: rotate(-60deg);
+  transform-origin: 50% 85%;
+ }
+ 
+ .three-body__dot:nth-child(2)::after {
+  bottom: 0;
+  left: 0;
+  animation: wobble1 var(--uib-speed) infinite
+     calc(var(--uib-speed) * -0.15) ease-in-out;
+ }
+ 
+ .three-body__dot:nth-child(3) {
+  bottom: -5%;
+  left: 0;
+  transform: translateX(116.666%);
+ }
+ 
+ .three-body__dot:nth-child(3)::after {
+  top: 0;
+  left: 0;
+  animation: wobble2 var(--uib-speed) infinite ease-in-out;
+ }
+ 
+ @keyframes spin78236 {
+  0% {
+   transform: rotate(0deg);
+  }
+ 
+  100% {
+   transform: rotate(360deg);
+  }
+ }
+ 
+ @keyframes wobble1 {
+  0%,
+   100% {
+   transform: translateY(0%) scale(1);
+   opacity: 1;
+  }
+ 
+  50% {
+   transform: translateY(-66%) scale(0.65);
+   opacity: 0.8;
+  }
+ }
+ 
+ @keyframes wobble2 {
+  0%,
+   100% {
+   transform: translateY(0%) scale(1);
+   opacity: 1;
+  }
+ 
+  50% {
+   transform: translateY(66%) scale(0.65);
+   opacity: 0.8;
+  }
+ }
+ 
+ .pagination { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ /* styles.css */
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #FF6F61; /* Lava orange color */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #6D28D9, skyblue, orangered); /* Purple, Indigo, Blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-hover:hover {
+  background: linear-gradient(90deg, #F87171, #FBBF24, crimson); /* Red, Orange, Yellow */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text2 {
+  background: linear-gradient(90deg, #3B82F6, #EF4444); /* Blue to Red */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold; /* Make the text bold */
+  font-style: italic; /* Make the text italic */
+}
+
+.gradient-text-hover2:hover {
+  background: linear-gradient(90deg, #FACC15, #F97316); /* Yellow to Orange */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
